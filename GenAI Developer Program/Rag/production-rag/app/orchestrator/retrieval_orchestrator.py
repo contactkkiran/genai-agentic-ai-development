@@ -8,6 +8,23 @@ class RetrievalOrchestrator:
     based on the user query.
     """
 
+    def extract_policy_id(self, query: str) -> Optional[str]:
+        """
+        Extract the full policy identifier from the user query.
+
+        Examples:
+            CAR-120
+            MED-500
+            LIFE-101
+        """
+
+        match = re.search(r"\b([A-Z]+-\d+)\b", query.upper())
+
+        if match:
+            return match.group(1)
+
+        return None
+
     def extract_policy_prefix(self, query: str) -> Optional[str]:
         """
         Extract the policy prefix from the user query.
@@ -24,10 +41,10 @@ class RetrievalOrchestrator:
             Policy prefix if found; otherwise None.
         """
 
-        match = re.search(r"([A-Z]+)-\d+", query.upper())
+        policy_id = self.extract_policy_id(query)
 
-        if match:
-            return match.group(1)
+        if policy_id:
+            return policy_id.split("-", maxsplit=1)[0]
 
         return None
 

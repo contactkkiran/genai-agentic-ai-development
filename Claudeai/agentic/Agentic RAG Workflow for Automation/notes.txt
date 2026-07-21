@@ -1,0 +1,86 @@
+✅ What Recruiters Will See
+Input: “Run the login test.”
+
+Agent output:
+“The login test failed because the password field was missing. According to the test plan, this is a regression bug.”
+
+That’s Agentic RAG for automation: tool execution + retrieval + reasoning.
+
+📊 Step‑by‑Step Flow
+User request
+
+You type: “Run the login API test.”
+
+Agent receives request
+
+Claude Sonnet reads the message.
+
+It sees that a tool (run_api_test) is available.
+
+Decides: “I need to call this tool.”
+
+Tool execution
+
+Your Python function (run_api_test) runs the actual API call (e.g., POST /login).
+
+Returns result: “Login API test failed: 401 Unauthorized.”
+
+RAG retrieval
+
+Agent queries your vector DB (FAISS/Pinecone) with “login API test”.
+
+Retrieves docs: “Spec requires valid JWT token in header.”
+
+Agent integrates
+
+Agent combines tool result + retrieved docs.
+
+Forms explanation:
+“The login API failed with 401 because no JWT token was provided. According to the API spec, authentication is required.”
+
+Final answer
+
+Agent sends this back to you in natural language.
+
+You see both the test result and the spec justification.
+
+🚀 Example in Action
+Input: “Run the login API test.”
+
+Tool result: “Login API test failed: 401 Unauthorized.”
+
+Docs retrieved: “Spec requires valid JWT token in header.”
+
+Agent output in natual :
+“The login API failed with 401 because no JWT token was provided. According to the API spec, authentication is required.”
+
+✅ Why This Flow Matters
+Agentic orchestration → Agent decides when to call tools.
+
+Automation integration → Tool runs real API tests.
+
+RAG reasoning → Retrieval explains failures using docs.
+
+Recruiter demo → Shows you can bridge QA automation with AI.
+
+📊 Agentic RAG Flow (API Validation)
+User request
+→ You say: “Run the login API test.”
+
+Agent decides tool use
+→ Claude Sonnet sees it should call run_api_test.
+
+Tool execution
+→ Python/REST Assured runs the API call.
+→ Returns: “Login API test failed: 401 Unauthorized.”
+
+RAG retrieval
+→ Agent queries vector DB with “login API”.
+→ Retrieves docs: “Spec requires valid JWT token in header.”
+
+Agent integrates
+→ Combines tool result + docs.
+→ Explains: “The login API failed with 401 because no JWT token was provided. According to the API spec, authentication is required.”
+
+Final answer
+→ Delivered back to you in natural language.
