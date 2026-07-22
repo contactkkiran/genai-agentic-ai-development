@@ -1,0 +1,512 @@
+# VECTOR AND EMBEDDING - NOTES
+
+# 1. VECTOR
+
+# Definition:
+# A vector is a one-dimensional array (list) of numbers.
+
+# Example:
+
+# v = np.array([42, 56])
+
+# Output:
+
+# [42 56]
+
+# More Examples:
+
+# salary = np.array([10000, 20000, 30000])
+
+# marks = np.array([80, 90, 95])
+
+# Interview Answer:
+# A vector is a one-dimensional array of numbers used to represent data mathematically.
+
+# Memory Trick:
+# Vector = List of Numbers
+
+
+# --------------------------------------------------
+
+
+# 2. EMBEDDING
+
+# Definition:
+# An embedding is a special vector that represents the meaning of data such as text, images, or audio.
+
+# Example:
+
+# Text:
+
+# "I love AI"
+
+# ↓
+
+# Embedding Model
+
+# ↓
+
+# [0.25, -0.09, 0.82]
+
+# The vector:
+
+# [0.25, -0.09, 0.82]
+
+# is called an Embedding Vector.
+
+# Interview Answer:
+# An embedding is a numerical vector representation of text, image, or audio that captures meaning.
+
+# Memory Trick:
+# Embedding = Meaningful Vector
+
+
+# --------------------------------------------------
+
+
+# VECTOR vs EMBEDDING
+
+# Example 1:
+
+# salary = [10000, 20000, 30000]
+
+# Result:
+
+# Vector      = YES
+# Embedding   = NO
+
+# Reason:
+# These are just salary values.
+
+
+# Example 2:
+
+# "I love AI"
+
+# ↓
+
+# [0.25, -0.09, 0.82]
+
+# Result:
+
+# Vector      = YES
+# Embedding   = YES
+
+# Reason:
+# The vector represents the meaning of text.
+
+
+# --------------------------------------------------
+
+
+# IMPORTANT RULE
+
+# All Embeddings are Vectors.
+
+# But
+
+# Not All Vectors are Embeddings.
+
+
+# --------------------------------------------------
+
+
+# CHATGPT / CLAUDE FLOW
+
+# User Prompt
+
+# "What is LangGraph?"
+
+# ↓
+
+# Embedding Model
+
+# ↓
+
+# [0.25, -0.09, 0.82, ...]
+
+# ↓
+
+# AI Math (Matrix Multiplication)
+
+# ↓
+
+# Response
+
+
+# --------------------------------------------------
+
+
+# INTERVIEW QUESTIONS
+
+# Q: What is a Vector?
+
+# A:
+# A vector is a one-dimensional array of numbers.
+
+
+# Q: What is an Embedding?
+
+# A:
+# An embedding is a vector that represents the meaning of data such as text, images, or audio.
+
+
+# Q: Is every embedding a vector?
+
+# A:
+# Yes.
+
+
+# Q: Is every vector an embedding?
+
+# A:
+# No.
+
+
+# Q: Give an example of a vector.
+
+# A:
+# [42, 56]
+
+
+# Q: Give an example of an embedding.
+
+# A:
+# [0.25, -0.09, 0.82]
+# (assuming it was generated from text)
+
+
+# --------------------------------------------------
+
+
+# ONE-LINE MEMORY TRICK
+
+# Vector = List of Numbers
+
+# Embedding = Meaningful Vector
+
+# REAL-TIME EMBEDDING EXAMPLES
+
+# ==================================================
+
+# EXAMPLE 1 - CHATGPT
+
+# User Types:
+
+# "Teach me NumPy"
+
+# ↓
+
+# Embedding Model
+
+# ↓
+
+# [0.25, -0.09, 0.82, ...]
+
+# ↓
+
+# LLM Processing
+
+# ↓
+
+# Response
+
+
+# Embedding Meaning:
+# The vector represents the meaning of
+# "Teach me NumPy"
+
+
+# ==================================================
+
+# EXAMPLE 2 - GOOGLE SEARCH
+
+# Search:
+
+# "best pizza near me"
+
+# ↓
+
+# Embedding
+
+# ↓
+
+# [0.18, -0.22, 0.77, ...]
+
+# ↓
+
+# Similarity Search
+
+# ↓
+
+# Relevant Results
+
+
+# Embedding Meaning:
+# Represents the search query.
+
+
+# ==================================================
+
+# EXAMPLE 3 - RAG APPLICATION
+
+# Question:
+
+# "What is the leave policy?"
+
+# ↓
+
+# Embedding
+
+# ↓
+
+# [0.42, -0.15, 0.33, ...]
+
+# ↓
+
+# Vector Database
+
+# ↓
+
+# Find Similar Documents
+
+# ↓
+
+# Answer
+
+
+# Embedding Meaning:
+# Represents the user's question.
+
+
+# ==================================================
+
+# EXAMPLE 4 - LINKEDIN JOB SEARCH
+
+# Job Description:
+
+# "Senior AI Engineer"
+
+# ↓
+
+# Embedding
+
+# ↓
+
+# [0.61, -0.07, 0.14, ...]
+
+# ↓
+
+# Compare With Resume Embeddings
+
+# ↓
+
+# Matching Jobs
+
+
+# Embedding Meaning:
+# Represents the job description.
+
+
+# ==================================================
+
+# EXAMPLE 5 - RESUME MATCHING
+
+# Resume:
+
+# "12 years Automation Architect experience"
+
+# ↓
+
+# Embedding
+
+# ↓
+
+# [0.51, -0.11, 0.74, ...]
+
+# ↓
+
+# Compare With Job Embeddings
+
+# ↓
+
+# Match Score
+
+
+# Embedding Meaning:
+# Represents the resume content.
+
+
+# ==================================================
+
+# EXAMPLE 6 - AMAZON PRODUCT SEARCH
+
+# Search:
+
+# "Wireless Gaming Mouse"
+
+# ↓
+
+# Embedding
+
+# ↓
+
+# [0.31, -0.28, 0.66, ...]
+
+# ↓
+
+# Similarity Search
+
+# ↓
+
+# Matching Products
+
+
+# Embedding Meaning:
+# Represents the product query.
+
+
+# ==================================================
+
+# EXAMPLE 7 - YOUTUBE RECOMMENDATION
+
+# Video Title:
+
+# "Learn LangGraph From Scratch"
+
+# ↓
+
+# Embedding
+
+# ↓
+
+# [0.45, -0.08, 0.91, ...]
+
+# ↓
+
+# Compared Against Millions Of Videos
+
+# ↓
+
+# Recommendations
+
+
+# Embedding Meaning:
+# Represents the video's meaning.
+
+
+# ==================================================
+
+# EXAMPLE 8 - FRAUD DETECTION
+
+# Transaction Data
+
+# ↓
+
+# Embedding
+
+# ↓
+
+# [0.72, -0.19, 0.04, ...]
+
+# ↓
+
+# ML Model
+
+# ↓
+
+# Fraud / Not Fraud
+
+
+# Embedding Meaning:
+# Represents transaction patterns.
+
+
+# ==================================================
+
+# EXAMPLE 9 - CUSTOMER SUPPORT CHATBOT
+
+# Customer:
+
+# "My internet is slow"
+
+# ↓
+
+# Embedding
+
+# ↓
+
+# [0.29, -0.14, 0.57, ...]
+
+# ↓
+
+# Find Similar Support Articles
+
+# ↓
+
+# Answer
+
+
+# Embedding Meaning:
+# Represents customer intent.
+
+
+# ==================================================
+
+# EXAMPLE 10 - CLAUDE / CHATGPT
+
+# Prompt:
+
+# "Explain matrix multiplication"
+
+# ↓
+
+# Embedding
+
+# ↓
+
+# [0.25, -0.09, 0.82, ...]
+
+# ↓
+
+# Matrix Math
+
+# ↓
+
+# Generated Response
+
+
+# Embedding Meaning:
+# Represents the meaning of the prompt.
+
+
+# ==================================================
+
+# INTERVIEW QUESTION
+
+# Q: Why do we need embeddings?
+
+# A:
+
+# Embeddings convert text into vectors so
+# computers can perform mathematical
+# operations and similarity search.
+
+
+# ==================================================
+
+# MEMORY TRICK
+
+# Text
+#  ↓
+# Embedding
+#  ↓
+# Vector
+#  ↓
+# Similarity Search
+#  ↓
+# AI Response
+
+from narwhals import Implementation
+
+# Implementation with claude

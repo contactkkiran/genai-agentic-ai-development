@@ -1,6 +1,6 @@
 # Gen AI, Agentic AI, RAG, and ML Mastery Roadmap
 
-This workspace is a learning roadmap with hands-on projects for Python, LLM foundations, RAG, agentic AI workflows, FastAPI services, and machine learning basics.
+This workspace is a learning roadmap with hands-on projects for Python, LLM foundations, Gen AI development(production Rag,PDF chunking), agentic AI workflows, FastAPI services, and machine learning basics.
 
 The repo is organized as multiple independent practice areas. Some folders contain runnable code, some contain notes or experiments, and some are placeholders for future work.
 
